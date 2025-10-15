@@ -103,7 +103,7 @@ JavaPrueba/
 └── README.md                     # Documentación del proyecto
 ```
 
-## Author: Isabella Pulgarin Muñoz
+### Author: Isabella Pulgarin Muñoz
 
 # Clan: Berneslee
 

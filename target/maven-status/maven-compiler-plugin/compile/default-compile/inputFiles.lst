@@ -1,0 +1,8 @@
+/home/error/Documentos/JAVA/coworking_portal/src/main/java/com/simulacro/app/App.java
+/home/error/Documentos/JAVA/coworking_portal/src/main/java/com/simulacro/app/config/DBconfig.java
+/home/error/Documentos/JAVA/coworking_portal/src/main/java/com/simulacro/app/errors/BadRequestException.java
+/home/error/Documentos/JAVA/coworking_portal/src/main/java/com/simulacro/app/errors/ConflictException.java
+/home/error/Documentos/JAVA/coworking_portal/src/main/java/com/simulacro/app/errors/DataAccessException.java
+/home/error/Documentos/JAVA/coworking_portal/src/main/java/com/simulacro/app/errors/NotFoundException.java
+/home/error/Documentos/JAVA/coworking_portal/src/main/java/com/simulacro/app/errors/ServiceException.java
+/home/error/Documentos/JAVA/coworking_portal/src/main/java/com/simulacro/app/errors/ValidationException.java

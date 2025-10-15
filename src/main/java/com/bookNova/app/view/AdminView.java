@@ -1,0 +1,66 @@
+package com.bookNova.app.view;
+
+import com.bookNova.app.domain.User;
+import com.bookNova.app.util.SessionManager;
+
+import javax.swing.JOptionPane;
+
+public class AdminView {
+
+    private final LoanView loanView;
+    private final BookView bookView;
+    private final UserView userView;
+
+    // 🔹 Constructor con las vistas necesarias
+    public AdminView(LoanView loanView, BookView bookView, UserView userView) {
+        this.loanView = loanView;
+        this.bookView = bookView;
+        this.userView = userView;
+    }
+
+    public void showMenu() {
+        User currentUser = SessionManager.getCurrentUser();
+        if (currentUser == null) {
+            JOptionPane.showMessageDialog(null, "No hay usuario logueado.");
+            return;
+        }
+
+        String[] options = {"Gestionar préstamos", "Gestionar libros", "Gestionar usuarios", "Salir"};
+        int choice;
+
+        do {
+            choice = JOptionPane.showOptionDialog(
+                    null,
+                    "Bienvenido, " + currentUser.getName(),
+                    "Menú Admin",
+                    JOptionPane.DEFAULT_OPTION,
+                    JOptionPane.INFORMATION_MESSAGE,
+                    null,
+                    options,
+                    options[0]
+            );
+
+            switch (choice) {
+                case 0 -> manageLoans();
+                case 1 -> manageBooks();
+                case 2 -> manageUsers();
+
+            }
+
+        } while (choice != 3 && choice != JOptionPane.CLOSED_OPTION);
+    }
+
+    private void manageLoans() {
+        loanView.showMenu();
+    }
+
+    private void manageBooks() {
+        bookView.showMenu();
+    }
+
+    private void manageUsers() {
+        userView.showMenu();
+    }
+
+}
+
